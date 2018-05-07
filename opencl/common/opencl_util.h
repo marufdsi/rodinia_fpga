@@ -133,7 +133,7 @@ inline static void select_device_interactive(cl_platform_id* platforms, cl_uint*
 	while ( !valid )
 	{
 		fprintf(stderr, "Please choose CL_DEVICE_TYPE: ");
-		device_type_char = '8'
+		device_type_char[0]= '8'
 		/*if ( !scanf("%s",device_type_char) )
 		{
 			fprintf(stderr, "Failed to receive input!\n");
