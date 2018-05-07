@@ -137,11 +137,11 @@ static inline int detect_cpu(void)
 // Returns amount of power used in joules
 static inline double GetEnergyCPU()
 {
-	/*if(geteuid() != 0)
+	if(geteuid() != 0)
 	{
 		fprintf(stderr, "Energy calculation skipped due to: non-root user.\n");
 		return -1;
-	}*/
+	}
 	
 	int fd, core = 0;
 	long long result;
