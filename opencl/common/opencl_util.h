@@ -133,13 +133,14 @@ inline static void select_device_interactive(cl_platform_id* platforms, cl_uint*
 	while ( !valid )
 	{
 		fprintf(stderr, "Please choose CL_DEVICE_TYPE: ");
-		if ( !scanf("%s",device_type_char) )
+		device_type_char = '8'
+		/*if ( !scanf("%s",device_type_char) )
 		{
 			fprintf(stderr, "Failed to receive input!\n");
 			exit(-1);
-		}
-//		*device_type = (cl_device_type)atoi(device_type_char);
-		*device_type = (cl_device_type)atoi("8");
+		}*/
+		*device_type = (cl_device_type)atoi(device_type_char);
+//		*device_type = (cl_device_type)atoi("8");
 		if ( strlen(device_type_char) > 1 || (!isdigit(device_type_char[0])) )
 		{
 			fprintf(stderr, "Device type should be a single-digit number!\n");
